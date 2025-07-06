@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "name": "Raul Alanis",
-  "email": "",
+  "email": "isabella.walker@example.com",
   "address": "Tlalnepantla, Mexico",
   "dateOfBirth": "1990-01-01",
   "registeredDate": "2025-01-01"
