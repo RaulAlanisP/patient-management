@@ -47,7 +47,7 @@ public class PatientServiceImpl implements IPatientService {
         Patient patient = patientRepository.findById(id).orElseThrow(
                 () -> new PatientNotFoundException("Patient not found with ID: " + id));
 
-        if (patientRepository.existsByEmail(patientRequestDto.email())) {
+        if (patientRepository.existsByEmailAndIdNot(patientRequestDto.email(), id)) {
             throw new EmailAlreadyExistsException("Patient with this email already exists: "
                     + patientRequestDto.email());
         }
@@ -61,4 +61,11 @@ public class PatientServiceImpl implements IPatientService {
 
         return PatientMapper.toDto(updatedPatient);
     }
+
+    @Override
+    public void deletePatient(UUID id) {
+        patientRepository.deleteById(id);
+    }
+
+
 }
