@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bedc4bb2-f5de-417b-b11f-a57cf626d604" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/31865c59-0abc-4137-9cc2-6c9c1ef0c802.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/31865c59-0abc-4137-9cc2-6c9c1ef0c802.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/31865c59-0abc-4137-9cc2-6c9c1ef0c802/storage_v2/_src_/database/db.fgwAAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/31865c59-0abc-4137-9cc2-6c9c1ef0c802/storage_v2/_src_/database/db.fgwAAA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +17,9 @@
       <list>
         <option value="Record" />
         <option value="Exception" />
-        <option value="Interface" />
         <option value="HTTP Request" />
         <option value="Dockerfile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -536,7 +533,7 @@
       <workItem from="1757093078065" duration="136000" />
       <workItem from="1757093294663" duration="198000" />
       <workItem from="1757093497505" duration="8361000" />
-      <workItem from="1757692253322" duration="6960000" />
+      <workItem from="1757692253322" duration="9805000" />
     </task>
     <servers />
   </component>
