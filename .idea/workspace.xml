@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bedc4bb2-f5de-417b-b11f-a57cf626d604" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/authservice/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/authservice/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/com/example/authservice/AuthServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +21,10 @@
       <list>
         <option value="Record" />
         <option value="Exception" />
-        <option value="HTTP Request" />
         <option value="Dockerfile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -69,7 +73,9 @@
     "HTTP Request.create-patient | POST request to create a new patient.executor": "Run",
     "HTTP Request.delete-patient | DELETE request to delete an existing patient.executor": "Run",
     "HTTP Request.get-patients | GET request to get all patients.executor": "Run",
+    "HTTP Request.login | Login Request to retrieve a token.executor": "Run",
     "HTTP Request.update-patient | PUT request to update an existing patient.executor": "Run",
+    "HTTP Request.validate | GET request to validate Token.executor": "Run",
     "Maven.analytics-service [clean].executor": "Run",
     "Maven.analytics-service [compile].executor": "Run",
     "Maven.billing-service [compile].executor": "Run",
@@ -137,13 +143,13 @@
     <configuration name="create-patient | POST request to create a new patient" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-requests/patient-service/create-patient.http" executionIdentifier="POST request to create a new patient" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="delete-patient | DELETE request to delete an existing patient" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-requests/patient-service/delete-patient.http" executionIdentifier="DELETE request to delete an existing patient" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="get-patients | GET request to get all patients" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-requests/patient-service/get-patients.http" executionIdentifier="GET request to get all patients" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="update-patient | PUT request to update an existing patient" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-requests/patient-service/update-patient.http" executionIdentifier="PUT request to update an existing patient" runType="Run single request">
+    <configuration name="login | Login Request to retrieve a token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-requests/auth-service/login.http" executionIdentifier="Login Request to retrieve a token" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="validate | GET request to validate Token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-requests/auth-service/validate.http" executionIdentifier="GET request to validate Token" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="AnalyticsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -270,6 +276,10 @@
           <option name="containerName" value="auth-service" />
           <option name="envVars">
             <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="JWT_SECRET" />
+                <option name="value" value="bXlzZWNyZXRrZXlkZWFsbWVub3N0cmVpbnRheWRvc2NhcmFjdGVyZXM=" />
+              </DockerEnvVarImpl>
               <DockerEnvVarImpl>
                 <option name="name" value="SPRING_DATASOURCE_PASSWORD" />
                 <option name="value" value="password" />
@@ -481,11 +491,11 @@
       <item itemvalue="Docker.patient-service-db" />
       <item itemvalue="Docker.auth-service-db" />
       <item itemvalue="Docker.auth-service" />
+      <item itemvalue="HTTP Request.login | Login Request to retrieve a token" />
+      <item itemvalue="HTTP Request.validate | GET request to validate Token" />
       <item itemvalue="HTTP Request.create-billing-account | #1" />
       <item itemvalue="HTTP Request.create-patient | POST request to create a new patient" />
-      <item itemvalue="HTTP Request.delete-patient | DELETE request to delete an existing patient" />
       <item itemvalue="HTTP Request.get-patients | GET request to get all patients" />
-      <item itemvalue="HTTP Request.update-patient | PUT request to update an existing patient" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.AnalyticsServiceApplication" />
       <item itemvalue="Spring Boot.BillingServiceApplication" />
@@ -493,11 +503,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.validate | GET request to validate Token" />
+        <item itemvalue="HTTP Request.login | Login Request to retrieve a token" />
         <item itemvalue="HTTP Request.get-patients | GET request to get all patients" />
         <item itemvalue="HTTP Request.create-patient | POST request to create a new patient" />
         <item itemvalue="HTTP Request.create-billing-account | #1" />
-        <item itemvalue="HTTP Request.delete-patient | DELETE request to delete an existing patient" />
-        <item itemvalue="HTTP Request.update-patient | PUT request to update an existing patient" />
       </list>
     </recent_temporary>
   </component>
@@ -533,7 +543,7 @@
       <workItem from="1757093078065" duration="136000" />
       <workItem from="1757093294663" duration="198000" />
       <workItem from="1757093497505" duration="8361000" />
-      <workItem from="1757692253322" duration="9805000" />
+      <workItem from="1757692253322" duration="14286000" />
     </task>
     <servers />
   </component>
