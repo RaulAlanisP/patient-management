@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bedc4bb2-f5de-417b-b11f-a57cf626d604" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/authservice/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/authservice/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/com/example/authservice/AuthServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/example/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-requests/auth-service/login.http" beforeDir="false" afterPath="$PROJECT_DIR$/api-requests/auth-service/login.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-requests/auth-service/validate.http" beforeDir="false" afterPath="$PROJECT_DIR$/api-requests/auth-service/validate.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-requests/patient-service/get-patients.http" beforeDir="false" afterPath="$PROJECT_DIR$/api-requests/patient-service/get-patients.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +28,8 @@
         <option value="Exception" />
         <option value="Dockerfile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTTP Request" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -136,7 +141,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.auth-service">
+  <component name="RunManager" selected="Docker.api-gateway">
     <configuration name="create-billing-account | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/grpc-requests/billing-service/create-billing-account.http" executionIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -155,6 +160,13 @@
     <configuration name="AnalyticsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="analytics-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.analyticsservice.AnalyticsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,6 +225,14 @@
         <settings>
           <option name="imageTag" value="api-gateway:latest" />
           <option name="containerName" value="api-gateway" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="AUTH_SERVICE_URL" />
+                <option name="value" value="http://auth-service:4005" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
           <option name="portBindings">
             <list>
               <DockerPortBindingImpl>
@@ -300,14 +320,6 @@
                 <option name="name" value="SPRING_SQL_INIT_MODE" />
                 <option name="value" value="always" />
               </DockerEnvVarImpl>
-            </list>
-          </option>
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="4005" />
-                <option name="hostPort" value="4005" />
-              </DockerPortBindingImpl>
             </list>
           </option>
           <option name="commandLineOptions" value="--network internal" />
@@ -496,6 +508,7 @@
       <item itemvalue="HTTP Request.create-billing-account | #1" />
       <item itemvalue="HTTP Request.create-patient | POST request to create a new patient" />
       <item itemvalue="HTTP Request.get-patients | GET request to get all patients" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.AnalyticsServiceApplication" />
       <item itemvalue="Spring Boot.BillingServiceApplication" />
@@ -503,9 +516,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.validate | GET request to validate Token" />
-        <item itemvalue="HTTP Request.login | Login Request to retrieve a token" />
         <item itemvalue="HTTP Request.get-patients | GET request to get all patients" />
+        <item itemvalue="HTTP Request.login | Login Request to retrieve a token" />
+        <item itemvalue="HTTP Request.validate | GET request to validate Token" />
         <item itemvalue="HTTP Request.create-patient | POST request to create a new patient" />
         <item itemvalue="HTTP Request.create-billing-account | #1" />
       </list>
@@ -543,7 +556,7 @@
       <workItem from="1757093078065" duration="136000" />
       <workItem from="1757093294663" duration="198000" />
       <workItem from="1757093497505" duration="8361000" />
-      <workItem from="1757692253322" duration="14286000" />
+      <workItem from="1757692253322" duration="20651000" />
     </task>
     <servers />
   </component>
